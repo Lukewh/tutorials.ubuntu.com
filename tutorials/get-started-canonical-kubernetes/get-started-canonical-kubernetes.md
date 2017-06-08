@@ -93,7 +93,7 @@ If you are running **macOS**:
 For **Windows** users, use [Chocolatey](https://chocolatey.org/install):
 `$ choco install kubectl`
 For **Centos and other Linuxes**:
-`$ sudo snap install kubectl --classic` 
+`$ sudo snap install kubectl --classic`
  
 2. Verify you can run kubectl. You will see a list of commands to control your cluster.
 `$ kubectl`
@@ -140,7 +140,7 @@ Spin up a simple static website in your Kubernetes cluster.
 1. You can run a Juju action to create an example microbot web application, deploying 5 replicas inside the Kubernetes cluster:
 `$ juju run-action kubernetes-worker/0 microbot replicas=5`  
  
-2. This action creates a deployment titled *microbots* comprised of 5 replicas defined during the run of the action. It also creates a service named *microbots* which binds an *endpoint*, using all 5 of the microbots pods. Finally, it will create an ingress resource, which points at a **xip.io** domain to simulate a proper DNS service.
+2. This action creates a deployment titled *microbots* comprised of 5 replicas defined during the run of the action. It also creates a service named *microbots* which binds an *endpoint*, using all 5 of the *microbots* pods. Finally, it will create an ingress resource, which points at a **xip.io** domain to simulate a proper DNS service.
  
 3. To see the result of this action, run:
  `$ juju show-action-output [id above]`
@@ -148,7 +148,7 @@ You should get a similar response to:
 ![Address microbot](./images/access-microbot.png)
 **Note**: Your FQDN will be different and contains the address of the cloud instance.
  
-4. Copy and paste the microbot address into your web browser: **microbot.xxx.xxx.xxx.xip.io**. It’s normal to see a 502/ 503 error during initial application turnup.
+4. Copy and paste the microbot address into your web browser: **microbot.xxx.xxx.xxx.xip.io**. It’s normal to see a 502/503 error during initial application turnup.
 ![App microbot](./images/app-microbot.png)
  
 5. You've successfully connected to a microbot container! Within a few seconds your microbot example application will be online, and load balanced across the 5 pods running the microbot application. Refresh and the hostname at the bottom should change with each request. 
